@@ -16,6 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 public class ApplicationFeignHystrix80 {
     public static void main(String[] args) {
+
         SpringApplication.run(ApplicationFeignHystrix80.class, args);
     }
 }

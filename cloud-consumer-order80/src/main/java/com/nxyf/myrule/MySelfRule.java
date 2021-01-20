@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:自带7种负载均衡算法
  * @author: myj
  * @create: 2021-01-17 08:51

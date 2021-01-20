@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:
  * @author: myj
  * @create: 2021-01-14 21:16

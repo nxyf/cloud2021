@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:
  * @author: myj
  * @create: 2021-01-14 20:38

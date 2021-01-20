@@ -23,3 +23,5 @@ eureka:
     prefer-ip-address: true #显示IP
     lease-renewal-interval-in-seconds: 1  #发送心跳间隔
     lease-expiration-duration-in-seconds: 2 #eureka服务端在收到最后一次心跳后，等待时间上限，超时将剔除
+swagger:
+  show: true

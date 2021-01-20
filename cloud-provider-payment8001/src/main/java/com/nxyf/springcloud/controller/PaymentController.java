@@ -2,12 +2,15 @@ package com.nxyf.springcloud.controller;
 
 import com.nxyf.springcloud.entities.CommonResult;
 import com.nxyf.springcloud.entities.Payment;
+import com.nxyf.springcloud.exception.GlobleException;
 import com.nxyf.springcloud.service.PaymentService;
+import com.nxyf.springcloud.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -77,5 +80,13 @@ public class PaymentController {
             e.printStackTrace();
         }
         return serverPort;
+    }
+
+    @GetMapping("/payment/lb/r")
+    public R r() {
+        if (!StringUtils.isEmpty(serverPort)) {
+            throw new GlobleException("服务异常",500);
+        }
+        return R.ok().put("serverPort",serverPort);
     }
 }

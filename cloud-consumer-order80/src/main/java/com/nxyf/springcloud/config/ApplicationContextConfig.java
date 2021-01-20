@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:
  * @author: myj
  * @create: 2021-01-14 22:32

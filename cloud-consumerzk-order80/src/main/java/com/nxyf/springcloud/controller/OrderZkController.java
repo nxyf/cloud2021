@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:
  * @author: myj
  * @create: 2021-01-16 09:04

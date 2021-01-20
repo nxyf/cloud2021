@@ -5,6 +5,8 @@ import com.nxyf.springcloud.entities.Payment;
 import com.nxyf.springcloud.exception.GlobleException;
 import com.nxyf.springcloud.service.PaymentService;
 import com.nxyf.springcloud.utils.R;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -18,13 +20,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:
  * @author: myj
  * @create: 2021-01-14 21:16
  */
 @RestController
 @Slf4j
+@Api(value = "支付接口value",tags = "支付接口tags")
 public class PaymentController {
 
     @Resource
@@ -36,6 +39,7 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    @ApiOperation(value = "新增接口")
     @PostMapping("/payment/create")
     public CommonResult create(@RequestBody Payment payment) {
         int i = paymentService.create(payment);

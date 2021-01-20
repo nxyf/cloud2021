@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:自定义轮询算法，需注释掉@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",
  * configuration = MySelfRule.class) 和 @LoadBalanced
  * @author: myj

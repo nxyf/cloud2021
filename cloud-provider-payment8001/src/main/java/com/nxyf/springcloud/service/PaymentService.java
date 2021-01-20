@@ -3,7 +3,7 @@ package com.nxyf.springcloud.service;
 import com.nxyf.springcloud.entities.Payment;
 
 /**
- * @program: cloud2020
+ * @program: springcloud
  * @description:
  * @author: myj
  * @create: 2021-01-14 21:09

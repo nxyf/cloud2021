@@ -2,6 +2,7 @@ package com.nxyf.springcloud.controller;
 
 import com.nxyf.springcloud.entities.CommonResult;
 import com.nxyf.springcloud.entities.Payment;
+import com.nxyf.springcloud.enums.ResultCode;
 import com.nxyf.springcloud.exception.GlobleException;
 import com.nxyf.springcloud.service.PaymentService;
 import com.nxyf.springcloud.utils.R;
@@ -89,7 +90,7 @@ public class PaymentController {
     @GetMapping("/payment/lb/r")
     public R r() {
         if (!StringUtils.isEmpty(serverPort)) {
-            throw new GlobleException("服务异常",500);
+            throw new GlobleException(ResultCode.FAIL.message,ResultCode.FAIL.code);
         }
         return R.ok().put("serverPort",serverPort);
     }

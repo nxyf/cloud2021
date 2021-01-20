@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
- * <p>
- * https://www.renren.io
- * <p>
- * 版权所有，侵权必究！
- */
 
 package com.nxyf.springcloud.config;
 
@@ -22,8 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Swagger配置
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Configuration
 @EnableSwagger2

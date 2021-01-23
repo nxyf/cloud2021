@@ -3,6 +3,7 @@ package com.nxyf.springcloud.controller;
 import com.nxyf.springcloud.entities.CommonResult;
 import com.nxyf.springcloud.entities.Payment;
 import com.nxyf.springcloud.lb.MyLoadBalancer;
+import com.nxyf.springcloud.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -54,5 +55,10 @@ public class OrderController {
         }
         ServiceInstance instance = myLoadBalancer.instance(instances);
         return restTemplate.getForObject(instance.getUri() + "/payment/lb", String.class);
+    }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public R zipkin() {
+        return restTemplate.getForObject("http://localhost:8001/payment/zipkin", R.class);
     }
 }

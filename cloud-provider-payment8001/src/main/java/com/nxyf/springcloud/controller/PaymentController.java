@@ -94,4 +94,9 @@ public class PaymentController {
         }
         return R.ok().put("serverPort",serverPort);
     }
+
+    @GetMapping("/payment/zipkin")
+    public R zipkin() {
+        return R.ok().put("serverPort",serverPort).put("data","zipkin");
+    }
 }

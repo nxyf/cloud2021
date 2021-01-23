@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: cloud-payment-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1  #采样率位于0到1之间，1表示完全采样
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://192.168.10.7:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false

@@ -7,13 +7,13 @@ spring:
   cloud:
     alibaba:
       seata:
-        tx-service-group: fsp_tx_group
+        tx-service-group: my_test_tx_group
     nacos:
       discovery:
         server-addr: localhost:8848
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.10.7:3306/seata_account
+    url: jdbc:mysql://192.168.101.75:3306/seata_account
     username: root
     password: root
 

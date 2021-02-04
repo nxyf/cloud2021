@@ -5,18 +5,43 @@ spring:
   application:
     name: seata-account-service
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: my_test_tx_group
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.101.108:8848
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.101.75:3306/seata_account
+    url: jdbc:mysql://192.168.101.108:3306/seata_account
     username: root
     password: root
-
+seata:
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+    grouplist:
+      default: 192.168.101.108:8091
+    enable-degrade: false
+    disable-global-transaction: false
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.101.108:8848
+      group: "SEATA_GROUP"
+      namespace: "6de48216-f950-4983-8dec-ca053112b499"
+      username: "nacos"
+      password: "nacos"
+  config:
+    type: nacos
+    nacos:
+      server-addr: 192.168.101.108:8848
+      group : "SEATA_GROUP"
+      namespace: "6de48216-f950-4983-8dec-ca053112b499"
+      username: "nacos"
+      password: "nacos"
+  enable-auto-data-source-proxy: false
+  tx-service-group: my_test_tx_group
+  enabled: true
+  application-id: ${spring.application.name}
 logging:
   level:
     io:
